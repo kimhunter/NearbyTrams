@@ -44,17 +44,17 @@ class NearbyStopsViewControllerModel: NSObject, StopsViewModelDelegate, Schedule
     }
     
     // StopsViewModelDelegate
-    func stopsViewModelDidAddStops(stopsViewModel: StopsViewModel, stops: StopViewModel[])
+    func stopsViewModelDidAddStops(stopsViewModel: StopsViewModel, stops: [StopViewModel])
     {
         
     }
     
-    func stopsViewModelDidRemoveStops(stopsViewModel: StopsViewModel, stops: StopViewModel[])
+    func stopsViewModelDidRemoveStops(stopsViewModel: StopsViewModel, stops: [StopViewModel])
     {
         
     }
     
-    func stopsViewModelDidUpdateStops(stopsViewModel: StopsViewModel, stops: StopViewModel[])
+    func stopsViewModelDidUpdateStops(stopsViewModel: StopsViewModel, stops: [StopViewModel])
     {
         
     }

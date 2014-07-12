@@ -17,7 +17,7 @@ class ViewController: NSViewController, NearbyStopsViewControllerModelDelegate, 
     var schedule: Schedule?
     
     let lifxNetworkContext: LFXNetworkContext
-    var lights: LFXLight[]?
+    var lights: [LFXLight]?
     
     let managedObjectContext: NSManagedObjectContext = {
         let moc = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
@@ -85,7 +85,7 @@ class ViewController: NSViewController, NearbyStopsViewControllerModelDelegate, 
     
     func updateLights()
     {
-        self.lights = self.lifxNetworkContext.allLightsCollection.lights as? LFXLight[]
+        self.lights = self.lifxNetworkContext.allLightsCollection.lights as? [LFXLight]
         if self.lights?.count > 0
         {
             let light: LFXLight = self.lights![0]

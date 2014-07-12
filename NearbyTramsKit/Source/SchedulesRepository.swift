@@ -1,3 +1,4 @@
+
 //
 //  Copyright (c) 2014 Dblechoc. All rights reserved.
 //
@@ -50,7 +51,7 @@ class SchedulesRepository
                     
                     if let objectIds = scheduleObjectIds
                     {
-                        let result: (schedules: Schedule[]?, error:NSError?) = Schedule.fetchAllForManagedObjectIds(objectIds, usingManagedObjectContext: self.managedObjectContext)
+                        let result: (schedules: [Schedule]?, error:NSError?) = Schedule.fetchAllForManagedObjectIds(objectIds, usingManagedObjectContext: self.managedObjectContext)
                         if let schedules = result.schedules
                         {
                             stop.schedules = NSMutableSet(array: schedules)

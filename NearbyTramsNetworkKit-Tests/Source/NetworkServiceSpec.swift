@@ -67,7 +67,7 @@ class NetworkServiceSpec: QuickSpec {
                 
                 it("should complete with an error") {
                     
-                    var array: NSDictionary[]!
+                    var array: [NSDictionary]!
                     var completionError: NSError!
                     
                     let task = service.getAllRoutesWithCompletionHandler {
@@ -84,7 +84,7 @@ class NetworkServiceSpec: QuickSpec {
             
             context("when successful") {
                 
-                var responseObject: Dictionary<String, AnyObject>[]!
+                var responseObject: [Dictionary<String, AnyObject>]!
                 
                 beforeEach {
                     responseObject = [["test": "blah"], ["test": "blah"]]
@@ -98,7 +98,7 @@ class NetworkServiceSpec: QuickSpec {
                 
                 it("should complete with a dictionary and no error") {
                     
-                    var array: NSDictionary[]!
+                    var array: [NSDictionary]!
                     var completionError: NSError!
                     
                     let task = service.getAllRoutesWithCompletionHandler {
@@ -152,7 +152,7 @@ class NetworkServiceSpec: QuickSpec {
                 
                 it("should complete with an error") {
                     
-                    var array: NSDictionary[]!
+                    var array: [NSDictionary]!
                     var completionError: NSError!
                     
                     let stopInfoTask = service.getStopsByRouteAndDirectionWithRouteNo(123, isUpDestination: true, {
@@ -169,7 +169,7 @@ class NetworkServiceSpec: QuickSpec {
             
             context("when successful") {
                 
-                var responseObject: Dictionary<String, AnyObject>[]!
+                var responseObject: [Dictionary<String, AnyObject>]!
                 
                 beforeEach {
                     responseObject = [["test": "blah"], ["test": "blah"]]
@@ -183,7 +183,7 @@ class NetworkServiceSpec: QuickSpec {
                 
                 it("should complete with a dictionary and no error") {
                     
-                    var array: NSDictionary[]!
+                    var array: [NSDictionary]!
                     var completionError: NSError!
                     
                     let task = service.getStopsByRouteAndDirectionWithRouteNo(123, isUpDestination: true, {
@@ -332,7 +332,7 @@ class NetworkServiceSpec: QuickSpec {
                 
                 it("should complete with an error") {
                     
-                    var array: NSDictionary[]!
+                    var array: [NSDictionary]!
                     var completionError: NSError!
                     
                     let stopInfoTask = service.getNextPredictionsWithStopNo(123, timestamp: NSDate(), {
@@ -349,7 +349,7 @@ class NetworkServiceSpec: QuickSpec {
             
             context("when successful") {
                 
-                var responseObject: Dictionary<String, AnyObject>[]!
+                var responseObject: [Dictionary<String, AnyObject>]!
                 
                 beforeEach {
                     responseObject = [["test": "blah"], ["test": "blah"]]
@@ -363,7 +363,7 @@ class NetworkServiceSpec: QuickSpec {
                 
                 it("should complete with a dictionary and no error") {
                     
-                    var array: NSDictionary[]!
+                    var array: [NSDictionary]!
                     var completionError: NSError!
                     
                     let task = service.getNextPredictionsWithStopNo(123, timestamp: NSDate(), {
